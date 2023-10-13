@@ -1,0 +1,424 @@
+/* ---------Font from google--------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --brand-color :#00804f;
+    --hover-color:#06965f;
+    --form-color:#1f1f21;
+    --brand-color-dim: linear-gradient(to bottom, rgba(129, 174, 9, 0.7), rgba(156, 203, 11, 0.7));
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ---------Main container--------- */
+.main-container{
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.658);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+ /* -----------------------------Left section starts here------------------------------------- */
+.left-side{
+   width: 50%;
+   height: 100%;
+   background:url("../images/backgrounds/bg4.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: white;
+   overflow: hidden;
+   position: relative;
+}
+.logo{
+  display: flex;
+  align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    color: white;
+    z-index: 99999;
+    font-size: 25px;
+}
+.logo h3{
+  margin-left: -9px;
+  font-size: 20px;
+}
+/* ---------Responsive link for signin on mobile devices--------- */
+.left-side a{
+    position: absolute;
+    top: 13px;
+    right:  25px;
+    color: white;
+    z-index: 99999;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+.left-side a:hover{
+  text-decoration: underline;
+}
+/* ---------left section contents--------- */
+ .content{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #013622ab, #00804f33);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px;
+    gap: 5px;
+ }
+ .content h1{
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: px;
+    line-height: 45px;
+ }
+ .content h1::first-letter{
+    font-size: 60px;
+ }
+ .content h1, .content p{
+  animation: slide 0.5s ease-in;
+ }
+ @keyframes slide{
+  0%{
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+ }
+ .content p{
+    text-align: left;
+    font-weight: 200;
+    line-height: 20px;
+    font-size: 13px;
+ }
+ .content button{
+    padding: 6px 35px;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 15px;
+ }
+ .content button:hover{
+   background-color: white;
+   color: var(--brand-color);
+ }
+
+ /* -----------------------------Right section starts here------------------------------------- */
+.right-side{
+    width: 50%;
+    height: 100%;
+    background-color: var(--form-color);
+    border-left: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/* ---------clip path in the center--------- */
+.clip-path{
+  position: absolute;
+  top: 50%;
+  left: -1.5%;
+  width: 40px;
+  height: 20px;
+  background-color: var(--brand-color);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  transform: rotate(90deg);
+z-index: 999999999;
+}
+/* ---------Blinking animation--------- */
+.roundedBlink {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--brand-color);
+  transition: 0.1s;
+  animation: blink 1s ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+/* ---------Form section--------- */
+.form-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 38px;
+    color: var(--brand-color);
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+  .message{
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+ .message, .signin {
+    color: rgba(128, 128, 128, 0.863);
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .signin {
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .signin a {
+    color: var(--brand-color);
+    text-decoration: none;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline var(--brand-color);
+  }
+
+  /* ---------Form controls--------- */
+  .name-container {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+    
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--form-color);
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    color: white;
+  }
+  .name-container label{
+     width: 100%;
+  }
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+ 
+  .material-symbols-outlined{
+    position: absolute;
+    top: 36%;
+    right: 5%;
+    color: grey;
+    font-size: 16px !important;
+    cursor: pointer;
+  }
+ 
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: -7px;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 0 3px ;
+    background-color: #1F1F20;
+    color: var(--brand-color);
+    letter-spacing: 1.5px;
+  }
+  
+  .form label .input:focus  {
+    border: 1px solid var(--brand-color);
+  }
+  .form label .input[type="email"]:valid,  .form label .input[type="password"]:valid {
+    border: 1px solid green;
+  }
+  
+  .form label .input[type="email"]:valid + span,  .form label .input[type="password"]:valid + span{
+    color: green;
+  }
+ .userAgreement{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .userAgreement span{
+  color: gray;
+  font-weight: 300;
+  font-size: 13px;
+  margin-left: 10px;
+ }
+
+ /* ---------Button section--------- */
+  .submit {
+    border: none;
+    outline: none;
+    background-color: var(--brand-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    cursor: pointer;
+    transition:all 0.5s;
+  }
+ 
+  .submit:hover {
+    background: var(--hover-color);
+    letter-spacing: 2px;
+  }
+  
+  .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 8px;
+  }
+ .social:hover{
+  transform: scale(1.06);
+  }
+  .social img{
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  .social p{
+   cursor: pointer; 
+   color: grey;
+   font-size: 13px;
+   font-weight: 300;
+  }
+
+  
+  /* ---------------------------------------Media queries --------------------------------------- */
+ 
+/* ---------for below 764px devices--------- */
+@media (max-width:764px){
+  body{
+      height: 100%;
+  }
+  .main-container{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  }
+  .left-side{
+      width: 100%;
+      height: 100%;
+   }
+   .right-side{
+      width: 100%;
+      height: 100%;
+      padding: 13px;
+   }
+   .form {
+      width: 100%;
+  }
+  .content h1{
+      font-size: 40px;
+      margin-top: 25px;
+   }
+   .content p{
+      font-size: 11px;
+   }
+   .content button{
+      padding: 3px 25px;
+   }
+   .left-side a{
+      display: block;
+   }
+   .clip-path{
+    top: 0%;
+    left: 48%;
+    transform: rotate(180deg);
+
+  }
+  
+  .content h1{
+    font-size: 25px;
+    margin-top: 30px;
+    line-height: 25px;
+  }
+  .content h1::first-letter{
+    font-size: 30px;
+  }
+  .content p{
+    line-height: 20px;
+  }
+
+}
+/* ---------for between 1200px and 1500px devices--------- */
+@media(min-width:1200px)and (max-width:1500px){
+  
+   .right-side{
+      padding: 35px 80px;
+   }
+   .form-container {
+      width: 100%;
+  }
+  .left-side a{
+      display: none;
+   }
+}

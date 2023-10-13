@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup form</title>
+    <link rel="stylesheet" href="Styles/signup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="main-container">   
+        <!-- Left section  -->
+        <div class="left-side">
+            <a href="#" id="signinTop">Sign-in</a>
+            <div class="logo">
+                <img src="images/backgrounds/coconut.png" alt=""  height="45px" width="45px" class="coconut">
+                <h3 >oconut Land</h3>
+            </div>
+            <div class="content">
+                <h1 id="welcome">Discover the Charms of Coconut Land</h1>
+                <p id="paragrah">"Welcome to Coconut Land, your gateway to the enchanting world of Kerala. Explore the lush landscapes, serene backwaters, and rich cultural heritage of Kerala, where every experience is a treasure waiting to be uncovered. With Coconut Land, you have an all-access pass to an enriching and entertaining exploration of this tropical haven."</p>
+                <button>Explore</button>
+            </div>          
+        </div>
+
+         <!-- Right section  -->
+        <div class="right-side">
+            <div class="clip-path"></div>
+            <div class="roundedBlink"></div>
+                <div class="form-container">
+                     <!-- Form  -->
+                    <form class="form first active">
+                        <p class="title">Signup </p>
+                        <p class="message">Get full access to our app </p>
+                        <!-- form controls  -->
+                        <div class="name-container">
+                            <label>
+                                <input required="" placeholder="" type="text" class="input">
+                                <span>Firstname</span>
+                            </label>
+                    
+                            <label>
+                                <input required="" placeholder="" type="text" class="input">
+                                <span>Lastname</span>
+                            </label>
+                        </div>  
+                                
+                        <label>
+                            <input required="" placeholder="" type="email" class="input email">
+                            <span>Email</span>
+                        </label> 
+                            
+                        <label>
+                            <i><span class="material-symbols-outlined icon">visibility_off</span></i>
+                            <input required="" placeholder="" type="password" class="input">
+                            <span>Password</span>
+                        </label>
+                        <label>
+                            <i><span class="material-symbols-outlined icon">visibility_off</span></i>
+                            <input required="" placeholder="" type="password" class="input">
+                            <span>Confirm password</span>
+                        </label>
+                        <div class="userAgreement">
+                            <input required="" placeholder="" type="checkbox" class="input">
+                            <span>Agree to the terms and conditions</span>
+                        </div> 
+                        <button class="submit"><a href="login.html" style="color: white; text-decoration: none;">Submit</a></button>
+                        <p class="signin">Already have an acount ? <a href="#" id="signin">Signin</a> </p>
+                        <div class="social">
+                            <img src="images/Google-logo.png" alt="google" width="35px" height="35px">
+                            <p>Signup with google</p>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>  
+</body>
+</html>
